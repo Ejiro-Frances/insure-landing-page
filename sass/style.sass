@@ -1,43 +1,97 @@
-@import "./utilities/font.sass"
 @import "./utilities/reset.sass"
+@import "./utilities/font.sass"
 @import "./utilities/mixins.sass"
 @import "./utilities/colors.sass"
 
 body
-  //@include flex-display
   font-family: 'Karla', sans-serif
- 
+
 header
   @include flex-between
-  padding: px-rem(20)
+  padding: px-rem(16)
 
   h1
-    font-family: "DM Serif Display", sans-serif
-    font-weight: 400
-    font-size: clamp(px-rem(16), 4vw + 1rem, px-rem(30))
+    font-size: clamp(px-rem(18), 5vw + 1rem, px-rem(36))
 
-main
+
+img#family-photo
+  width: 100%
+  min-height: 90vh
+  display: block
+
+.violet-section
+  @include flex-display
   background: $dark-violet
   color: $very-light-gray
-  
-  #family-photo
-    min-width: 100%
-    max-height: 100vh
-  
+  min-height: 50vh
+  padding: px-rem(10) px-rem(20)
+  max-width: 45ch
+  text-align: center
 
-  #hero-page
-    @include flex-display
-    min-height: 60vh
-    padding: px-rem(30)
-    max-width: 45ch
-    text-align: center
+  h2
+    font-size: clamp(px-rem(24), 4vw + 1rem, px-rem(38))
+  p 
+    line-height: 1.7
+    padding: px-rem(18) 0
+    opacity: .7
+    font-size: clamp(px-rem(16), 4vw + 1rem, px-rem(20))
 
-    h2
-      font-size: clamp(px-rem(24), 4vw + 1rem, px-rem(36))
-     
-    
-   
-    
+  .btn     
+    border: 2px solid $very-light-gray
+    background: inherit
+    color: inherit
+    text-transform: uppercase
+    padding: px-rem(15) px-rem(35)
+    font-size: clamp(px-rem(10), 4vw + 1rem, px-rem(14))
+    opacity: .8   
+    margin-top: px-rem(65)   
+
+.boxed-section
+  @include flex-display
+  padding: px-rem(65) px-rem(30)
+  text-align: center
+
+  .small-line
+    min-height: px-rem(0.5)
+    min-width: px-rem(200)
+    margin-bottom: px-rem(35)
+    background: $dark-violet
+
+  h3
+    font-size: clamp(px-rem(24), 8vw + 1rem, px-rem(38))
+  
+  .box-container
+    padding-top: px-rem(30)
+    article
+      padding: px-rem(40) px-rem(10)
+      line-height: 1.8
+
+      h4
+        font-size: clamp(px-rem(24), 6vw + 1rem, px-rem(38))
+        padding: px-rem(20) 0
+
+      p
+        font-size: clamp(px-rem(15), 5vw + 1rem, px-rem(18))
+
+.inquiry-section
+  margin: px-rem(30) 0 px-rem(80)
+  padding: px-rem(20) px-rem(30)
+
+  
+  h2
+    font-size: clamp(px-rem(28), 8vw + 1rem, px-rem(40))
+
+footer
+  text-align: center
+  line-height: 2
+
+  .foot-head
+    border-bottom: 1px solid $dark-violet
+    margin: px-rem(20)
+    .social-links
+      margin: px-rem(20)
+      img
+        margin: 0 px-rem(7)
 
 .attribution
   font-size: 11px
