@@ -1,0 +1,76 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.25rem;
+}
+header h1 {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 4vw + 1rem, 1.875rem);
+}
+
+main {
+  background: hsl(256, 26%, 20%);
+  color: hsl(0, 0%, 98%);
+}
+main #family-photo {
+  min-width: 100%;
+  max-height: 100vh;
+}
+main #hero-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 60vh;
+  padding: 1.875rem;
+  max-width: 45ch;
+  text-align: center;
+}
+main #hero-page h2 {
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.25rem);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

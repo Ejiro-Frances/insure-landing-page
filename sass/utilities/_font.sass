@@ -1,0 +1,16 @@
+@use "sass:math"
+
+$base-font: 16
+
+@function px-rem($px-value)
+  @return calc($px-value / $base-font)*1rem
+
+//use md serif display for headings and karla for others
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: "DM Serif Display", serif

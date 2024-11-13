@@ -1,0 +1,46 @@
+@import "./utilities/font.sass"
+@import "./utilities/reset.sass"
+@import "./utilities/mixins.sass"
+@import "./utilities/colors.sass"
+
+body
+  //@include flex-display
+  font-family: 'Karla', sans-serif
+ 
+header
+  @include flex-between
+  padding: px-rem(20)
+
+  h1
+    font-family: "DM Serif Display", sans-serif
+    font-weight: 400
+    font-size: clamp(px-rem(16), 4vw + 1rem, px-rem(30))
+
+main
+  background: $dark-violet
+  color: $very-light-gray
+  
+  #family-photo
+    min-width: 100%
+    max-height: 100vh
+  
+
+  #hero-page
+    @include flex-display
+    min-height: 60vh
+    padding: px-rem(30)
+    max-width: 45ch
+    text-align: center
+
+    h2
+      font-size: clamp(px-rem(24), 4vw + 1rem, px-rem(36))
+     
+    
+   
+    
+
+.attribution
+  font-size: 11px
+  text-align: center
+  a
+    color: hsl(228, 45%, 44%)
