@@ -99,6 +99,7 @@ img#family-photo {
   text-align: center;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 .violet-section h1 {
   font-size: clamp(1.5rem, 4vw + 1rem, 2.375rem);
