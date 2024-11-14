@@ -13,11 +13,6 @@ body {
   line-height: 1.1;
 }
 
-img,
-picture {
-  display: block;
-}
-
 ul,
 ol {
   list-style: none;
@@ -43,6 +38,7 @@ h6 {
 
 body {
   font-family: "Karla", sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -54,38 +50,45 @@ header {
 }
 header h1 {
   font-size: clamp(1.125rem, 5vw + 1rem, 2.25rem);
+  letter-spacing: 0.21875rem;
 }
 
 #hamburger-icon {
   position: relative;
+  cursor: pointer;
 }
 
 .mobile-nav-links {
   text-align: center;
+  cursor: pointer;
   background: hsl(256, 26%, 20%);
   color: hsl(0, 0%, 98%);
   position: absolute;
   right: -100%;
-  top: 65px;
+  top: 67px;
   min-height: 98vh;
   min-width: 100%;
   padding-top: 2.5rem;
-  display: none;
-  transition: all 0.3s ease;
+  transition: right 0.3s ease;
+  overflow: hidden;
 }
 .mobile-nav-links li {
   margin: 0.8125rem;
   padding: 0.9375rem;
 }
+.mobile-nav-links li:hover {
+  color: black;
+}
 
 .activeMobile {
   right: 0;
-  display: block;
+  overflow: hidden;
 }
 
 img#family-photo {
   width: 100%;
-  min-height: 90vh;
+  max-height: 90vh;
+  display: block;
 }
 
 .violet-section {
@@ -95,9 +98,11 @@ img#family-photo {
   flex-direction: column;
   background: hsl(256, 26%, 20%);
   color: hsl(0, 0%, 98%);
-  min-height: 50vh;
+  min-height: 90vh;
   padding: 0.625rem 1.875rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .violet-section h2 {
   font-size: clamp(1.5rem, 4vw + 1rem, 2.375rem);
@@ -109,13 +114,26 @@ img#family-photo {
   font-size: clamp(0.875rem, 4vw + 1rem, 1.125rem);
 }
 
+picture.intro-img-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+picture.intro-img-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
 .btn {
   border: 2px solid hsl(0, 0%, 98%);
   background: inherit;
   color: inherit;
   text-transform: uppercase;
   padding: 0.625rem 1.875rem;
-  font-size: clamp(0.5rem, 3vw + 1rem, 0.75rem);
   opacity: 0.8;
   margin: 0.9375rem 0 4.0625rem;
   box-shadow: 0 2px 8px rgba(250, 250, 250, 0.1);
@@ -161,9 +179,11 @@ img#family-photo {
 }
 
 .inquiry-section {
+  @flex-display;
   margin: 1.875rem auto;
-  padding: 1.25rem 3.125rem;
+  padding: 1.5625rem 3.125rem;
   max-width: 90%;
+  min-height: 50vh;
 }
 .inquiry-section h2 {
   font-size: clamp(1.75rem, 4vw + 1rem, 2.5rem);

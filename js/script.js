@@ -4,4 +4,9 @@ const mobileLinks = document.querySelector(".mobile-nav-links");
 
 mobileMenu.addEventListener("click", () => {
   mobileLinks.classList.toggle("activeMobile");
+  if (mobileLinks.classList.contains("activeMobile")) {
+    mobileMenu.src = "./images/icon-close.svg";
+  } else {
+    mobileMenu.src = "./images/icon-hamburger.svg";
+  }
 });

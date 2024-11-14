@@ -5,6 +5,7 @@
 
 body
   font-family: 'Karla', sans-serif
+  overflow-x: hidden
   
 
 header
@@ -13,45 +14,53 @@ header
 
   h1
     font-size: clamp(px-rem(18), 5vw + 1rem, px-rem(36))
+    letter-spacing: px-rem(3.5)
 
 #hamburger-icon
   position: relative
+  cursor: pointer
 
 .mobile-nav-links
   text-align: center
+  cursor: pointer
   background: $dark-violet
   color: $very-light-gray
   position: absolute
   right: -100%
-  top: 65px
+  top: 67px
   min-height: 98vh
   min-width: 100%
   padding-top: px-rem(40)
-  display: none
-  transition: all 0.3s ease
+  transition: right 0.3s ease
+  overflow: hidden
+ 
   
   li
     margin: px-rem(13)
     padding: px-rem(15)
+    &:hover
+      color: black
 
 .activeMobile
   right: 0
-  display: block
+  overflow: hidden
 
     
    
-  
 img#family-photo
   width: 100%
-  min-height: 90vh
+  max-height: 90vh
+  display: block
 
 .violet-section
   @include flex-display
   background: $dark-violet
   color: $very-light-gray
-  min-height: 50vh
+  min-height: 90vh
   padding: px-rem(10) px-rem(30)
   text-align: center
+  position: relative
+  z-index: 1
 
   h2
     font-size: clamp(px-rem(24), 4vw + 1rem, px-rem(38))
@@ -61,13 +70,25 @@ img#family-photo
     opacity: .7
     font-size: clamp(px-rem(14), 4vw + 1rem, px-rem(18))
 
+picture.intro-img-left
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 0
+
+picture.intro-img-right
+  position: absolute
+  bottom: 0
+  right: 0
+  z-index: 0
+
 .btn     
   border: 2px solid $very-light-gray
   background: inherit
   color: inherit
   text-transform: uppercase
   padding: px-rem(10) px-rem(30)
-  font-size: clamp(px-rem(8), 3vw + 1rem, px-rem(12))
+  //font-size: clamp(px-rem(8), 3vw + 1rem, px-rem(12))
   opacity: .8   
   margin: px-rem(15) 0 px-rem(65)
   box-shadow: 0 2px 8px rgba(250,250,250, .1)   
@@ -105,9 +126,11 @@ img#family-photo
         line-height: 1.8
 
 .inquiry-section
+  @flex-display
   margin: px-rem(30) auto
-  padding: px-rem(20) px-rem(50)
+  padding: px-rem(25) px-rem(50)
   max-width: 90%
+  min-height: 50vh
 
   
   h2
