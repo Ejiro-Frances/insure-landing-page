@@ -32,7 +32,7 @@
   </head>
   <body>
     <header>
-      <h1>INSURE</h1>
+      <img src="./images/logo.svg" alt="logo" />
       <img
         src="./images/icon-hamburger.svg"
         alt="Hamburger Menu"
@@ -64,16 +64,19 @@
               alt="background lines"
             />
           </picture>
-          <h2>
-            Humanizing <br />
-            your insurance.
-          </h2>
-          <p>
-            Get your life insurance coverage easier and faster. We blend our
-            expertise and technology to help you find the plan that’s right for
-            you. Ensure you and your loved ones are protected.
-          </p>
-          <button class="btn">View plans</button>
+          <article class="hero-contained">
+            <span class="small-line"></span>
+            <h1>
+              Humanizing <br />
+              your insurance.
+            </h1>
+            <p>
+              Get your life insurance coverage easier and faster. We blend our
+              expertise and technology to help you find the plan that’s right
+              for you. Ensure you and your loved ones are protected.
+            </p>
+            <button class="btn">View plans</button>
+          </article>
           <picture class="intro-img-right">
             <source
               srcset="./images/bg-pattern-intro-right-desktop.svg"
@@ -124,11 +127,31 @@
     <section class="inquiry-section violet-section">
       <h2>Find out more about how we work</h2>
       <button class="btn">How we work</button>
+      <picture class="how-we-work-img">
+        <source
+          srcset="./images/bg-pattern-how-we-work-desktop.svg"
+          media="(min-width:720px)"
+        />
+        <img
+          src="./images/bg-pattern-how-we-work-mobile.svg"
+          alt="background lines"
+        />
+      </picture>
     </section>
 
-    <footer>
+    <footer id="footer">
       <section class="foot-head">
-        <h1>INSURE</h1>
+        <picture id="footer-head-img">
+          <source
+            srcset="./images/bg-pattern-footer-desktop.svg"
+            media="(min-width: 720px)"
+          />
+          <img
+            src="./images/bg-pattern-footer-mobile.svg"
+            alt="background image"
+          />
+        </picture>
+        <img src="./images/logo.svg" alt="logo" />
         <div class="social-links">
           <img src="./images/icon-facebook.svg" alt="Facebook" />
           <img src="./images/icon-twitter.svg" alt="Twitter" />
