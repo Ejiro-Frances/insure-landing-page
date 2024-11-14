@@ -5,6 +5,7 @@
 
 body
   font-family: 'Karla', sans-serif
+  
 
 header
   @include flex-between
@@ -13,38 +14,63 @@ header
   h1
     font-size: clamp(px-rem(18), 5vw + 1rem, px-rem(36))
 
+#hamburger-icon
+  position: relative
 
+.mobile-nav-links
+  text-align: center
+  background: $dark-violet
+  color: $very-light-gray
+  position: absolute
+  right: -100%
+  top: 65px
+  min-height: 98vh
+  min-width: 100%
+  padding-top: px-rem(40)
+  display: none
+  transition: all 0.3s ease
+  
+  li
+    margin: px-rem(13)
+    padding: px-rem(15)
+
+.activeMobile
+  right: 0
+  display: block
+
+    
+   
+  
 img#family-photo
   width: 100%
   min-height: 90vh
-  display: block
 
 .violet-section
   @include flex-display
   background: $dark-violet
   color: $very-light-gray
   min-height: 50vh
-  padding: px-rem(10) px-rem(20)
-  max-width: 45ch
+  padding: px-rem(10) px-rem(30)
   text-align: center
 
   h2
     font-size: clamp(px-rem(24), 4vw + 1rem, px-rem(38))
   p 
     line-height: 1.7
-    padding: px-rem(18) 0
+    padding: px-rem(18) px-rem(20)
     opacity: .7
-    font-size: clamp(px-rem(16), 4vw + 1rem, px-rem(20))
+    font-size: clamp(px-rem(14), 4vw + 1rem, px-rem(18))
 
-  .btn     
-    border: 2px solid $very-light-gray
-    background: inherit
-    color: inherit
-    text-transform: uppercase
-    padding: px-rem(15) px-rem(35)
-    font-size: clamp(px-rem(10), 4vw + 1rem, px-rem(14))
-    opacity: .8   
-    margin-top: px-rem(65)   
+.btn     
+  border: 2px solid $very-light-gray
+  background: inherit
+  color: inherit
+  text-transform: uppercase
+  padding: px-rem(10) px-rem(30)
+  font-size: clamp(px-rem(8), 3vw + 1rem, px-rem(12))
+  opacity: .8   
+  margin: px-rem(15) 0 px-rem(65)
+  box-shadow: 0 2px 8px rgba(250,250,250, .1)   
 
 .boxed-section
   @include flex-display
@@ -53,7 +79,7 @@ img#family-photo
 
   .small-line
     min-height: px-rem(0.5)
-    min-width: px-rem(200)
+    min-width: 15vw
     margin-bottom: px-rem(35)
     background: $dark-violet
 
@@ -61,40 +87,63 @@ img#family-photo
     font-size: clamp(px-rem(24), 8vw + 1rem, px-rem(38))
   
   .box-container
+    @include grid-display
     padding-top: px-rem(30)
+
     article
       padding: px-rem(40) px-rem(10)
-      line-height: 1.8
-
+      
+      img
+        max-width: 3.5em
       h4
-        font-size: clamp(px-rem(24), 6vw + 1rem, px-rem(38))
+        font-size: clamp(px-rem(22), 4vw + 1rem, px-rem(27))
         padding: px-rem(20) 0
+        font-weight: 400
 
       p
-        font-size: clamp(px-rem(15), 5vw + 1rem, px-rem(18))
+        font-size: clamp(px-rem(12), 5vw + 1rem, px-rem(16))
+        line-height: 1.8
 
 .inquiry-section
-  margin: px-rem(30) 0 px-rem(80)
-  padding: px-rem(20) px-rem(30)
+  margin: px-rem(30) auto
+  padding: px-rem(20) px-rem(50)
+  max-width: 90%
 
   
   h2
-    font-size: clamp(px-rem(28), 8vw + 1rem, px-rem(40))
+    font-size: clamp(px-rem(28), 4vw + 1rem, px-rem(40))
+    margin-bottom: px-rem(30)
 
 footer
   text-align: center
   line-height: 2
+  margin-top: px-rem(200)
+  color: $dark-violet
 
   .foot-head
-    border-bottom: 1px solid $dark-violet
+    border-bottom: 1px solid $dark-grayish-violet
     margin: px-rem(20)
     .social-links
       margin: px-rem(20)
       img
         margin: 0 px-rem(7)
 
+  #foot-page-links
+    @include grid-display
+    text-transform: uppercase
+   
+    h4
+      margin-bottom: px-rem(15)
+      font-size: clamp(px-rem(8), 4vw + 1rem, px-rem(14))
+
+    ul
+      li
+        a
+          font-size: clamp(px-rem(6), 4vw + 1rem, px-rem(12))
+
 .attribution
   font-size: 11px
   text-align: center
+  margin-top: px-rem(50)
   a
     color: hsl(228, 45%, 44%)
