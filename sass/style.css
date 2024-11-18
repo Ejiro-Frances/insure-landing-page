@@ -60,7 +60,7 @@ header {
   padding: 0.9375rem;
 }
 
-.hamburger-icon {
+#hamburger-icon {
   position: relative;
   cursor: pointer;
 }
@@ -71,8 +71,8 @@ header {
   color: hsl(0, 0%, 98%);
   position: absolute;
   right: 0;
-  display: none;
   top: 65px;
+  display: none;
   min-height: 100vh;
   overflow: hidden;
   min-width: 100%;
