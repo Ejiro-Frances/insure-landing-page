@@ -74,11 +74,14 @@ header {
   top: 65px;
   display: none;
   min-height: 100vh;
-  overflow: hidden;
   min-width: 100%;
   padding-top: 2.5rem;
   transition: all 0.3s ease-in;
   z-index: 1001;
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
 }
 .mobile-nav-links li {
   text-align: center;
@@ -86,7 +89,7 @@ header {
   padding: 0.9375rem;
 }
 .mobile-nav-links li:hover {
-  color: hsl(256, 26%, 20%);
+  color: black;
 }
 
 .activeMobile {
