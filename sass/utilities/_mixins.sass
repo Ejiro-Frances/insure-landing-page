@@ -22,7 +22,12 @@
   align-items: $align
   flex-direction: $direction
 
-@mixin grid-display($display: grid, $columns:repeat(auto-fit, minmax(250px, 1fr)), $gap:px-rem(10))
+@mixin grid-display($display: grid, $columns:repeat(auto-fit, minmax(250px, 1fr)), $gap:px-rem(05))
+  display: $display
+  grid-template-columns: $columns
+  gap: $gap
+
+@mixin grid-min($display: grid, $columns:repeat(auto-fit, minmax(150px, 1fr)), $gap:px-rem(05))
   display: $display
   grid-template-columns: $columns
   gap: $gap

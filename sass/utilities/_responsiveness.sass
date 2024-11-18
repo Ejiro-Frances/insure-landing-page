@@ -1,0 +1,125 @@
+@import "./font.sass"
+@import "./colors.sass"
+@import "./mixins.sass"
+
+@media (min-width:620px) and (max-width:800px)
+  #hero-page
+    @include flex-row($direction:row-reverse)
+    min-height: 98vh
+    position: relative
+   
+    .intro-img-right
+      position: absolute
+      top: 0
+      right: 0
+  .img-col
+    min-width: unset
+    max-width: 50%
+    height: unset
+    margin-right: 2rem
+
+  .text-col
+    text-align: justify
+    max-width: 50%
+
+  .boxed-section
+    max-width: 80%
+    margin: 4.5rem auto 0
+
+
+@media (min-width: 820px)
+  .hamburger-icon
+    display: none
+
+  .nav-links
+    @include flex-row
+    background: inherit
+    color: $dark-grayish-violet
+    position: unset
+    min-height: unset
+    min-width: unset
+    padding-top: unset
+
+    li
+      margin: 0 px-rem(10)
+      padding: px-rem(10) px-rem(15)
+      
+      &:hover
+        color: black
+        box-shadow: 1px 4px 10px rgba(0,0,0,0.2), 1px 4px 10px rgba(0,0,0,0.2), 1px 4px 10px rgba(0,0,0,0.2), 1px 4px 10px rgba(0,0,0,0.2)
+      &:last-child
+        border: 1px solid $dark-violet
+        &:hover
+          box-shadow: 1px 4px 5px rgba(0,0,0,0.9)
+          background: $dark-violet
+          color: $very-light-gray
+  
+  //to the hero section
+  #hero-page
+    @include flex-row($direction:row-reverse)
+    padding: px-rem(10) px-rem(30)
+    position: relative
+    .intro-img-left
+      position: absolute
+      top: 20em
+      left: 0
+    .intro-img-right
+      position: absolute
+      top: 0
+      right: 0
+    picture
+      height: px-rem(450)
+      
+  .small-line
+    min-height: 1px
+    max-width: px-rem(100)
+    margin-bottom: px-rem(35)
+    background: $dark-grayish-violet
+
+  .img-col
+    min-width: unset
+    max-width: 60%
+    padding-right: 11rem
+
+
+  .text-col
+    max-width: 45%
+    text-align: left
+
+  #family-photo
+    transform: translateY(px-rem(85))
+
+  .boxed-section
+    text-align: left
+    display: block
+    max-width: 80%
+    margin: 4.5rem auto 0
+
+  #inquiry-section
+    @include flex-between
+    padding: px-rem(15) px-rem(50)
+    max-width: 80%
+  
+    .how-we-work-img
+      height: 100%
+
+  #footer
+    #footer-head-img
+      position: absolute
+      top: 0
+      left: 0
+      width: unset
+
+  .foot-head
+    @include flex-between
+    margin: 0 auto px-rem(25)
+  #foot-page-links
+    @include grid-min
+    text-align: left
+
+@media (min-width:820px) and (max-width:920px)
+  .img-col
+    padding-right: 2rem
+  .boxed-section
+    max-width: 90%
+    
