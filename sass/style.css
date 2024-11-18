@@ -60,12 +60,12 @@ header {
   padding: 0.9375rem;
 }
 
-#hamburger-icon {
+.hamburger-icon {
   position: relative;
   cursor: pointer;
 }
 
-.nav-links {
+.mobile-nav-links {
   cursor: pointer;
   background: hsl(256, 26%, 20%);
   color: hsl(0, 0%, 98%);
@@ -78,19 +78,21 @@ header {
   min-width: 100%;
   padding-top: 2.5rem;
   transition: all 0.3s ease-in;
+  z-index: 1001;
 }
-.nav-links li {
+.mobile-nav-links li {
   text-align: center;
   margin: 0.8125rem;
   padding: 0.9375rem;
 }
-.nav-links li:hover {
+.mobile-nav-links li:hover {
   color: hsl(256, 26%, 20%);
 }
 
 .activeMobile {
   transition: all 0.3s ease-in;
   display: block;
+  opacity: 1;
 }
 
 #hero-page {

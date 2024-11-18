@@ -24,11 +24,11 @@ header
   @include flex-between
   padding: px-rem(15)
 
-#hamburger-icon
+.hamburger-icon
   position: relative
   cursor: pointer
 
-.nav-links
+.mobile-nav-links
   cursor: pointer
   background: $dark-violet
   color: $very-light-gray
@@ -41,6 +41,7 @@ header
   min-width: 100%
   padding-top: px-rem(40)
   transition: all 0.3s ease-in
+  z-index: 1001
 
   li
     text-align: center
@@ -54,6 +55,7 @@ header
 .activeMobile
   transition: all 0.3s ease-in
   display: block
+  opacity: 1
 
 //to the hero section
 #hero-page
